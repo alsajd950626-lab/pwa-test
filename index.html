@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <link rel="manifest" href="/manifest.json">
+
   <title>테스트 알림</title>
 </head>
 <body>
@@ -25,8 +27,8 @@
       // 서비스워커 통해 알림 보내기
       const reg = await navigator.serviceWorker.getRegistration();
       if (reg) {
-        reg.showNotification("테스트 알림", {
-          body: "내 아이폰에 뜨는 알림 ✨",
+        reg.showNotification("추천인 프리미엄 리워드 안내", {
+          body: "",
           icon: "/icon.png",  // 아무 이미지나 넣어도 됨
           badge: "/icon.png"
         });
